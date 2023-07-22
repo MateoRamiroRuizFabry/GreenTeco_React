@@ -1,8 +1,10 @@
 import Logo from '../../Assets/LogoJoyeria.png'
 import Cart from '../CartWidgetComponent/CartWidgetComponent'
+import {Link} from "react-router-dom";
+
 function NavBar (props){
     const styleNavBar = {
-        backgroundColor: props.colorFondo,
+        backgroundColor: 'whitesmoke',
         display: 'flex',
     }
     const styleItemsNav = {
@@ -19,6 +21,8 @@ function NavBar (props){
     }
     const styleA = {
         margin: '5px',
+        textDecoration: 'none',
+        color: 'black'
     }
     const styleCart ={
         width: '33%',
@@ -28,16 +32,17 @@ function NavBar (props){
     }
     return (
         <div> 
-           <nav style={styleNavBar}>{props.label}
+           <nav style={styleNavBar}>
            <div style={styleItemsNav}>
-                <a style={styleA}>Inicio</a>
-                <a style={styleA}>Colecciones</a>
-                <a style={styleA}>Cómo comprar</a>  
+                <Link to="/" style={styleA}>Inicio</Link>
+                <Link to="/" style={styleA}>Colecciones</Link>
+                <Link to="/" style={styleA}>Cómo comprar</Link>
+                <Link to="/category/Anillo" style={styleA}>Anillo</Link>  
            </div> 
            <div style={styleLogo}>
-                <a href="#">
+                <Link to="/">
                     <img style={{width:'100px', alignItems:'center'}} src={Logo}/>
-                </a> 
+                </Link> 
            </div>
             <div style={styleCart}>
                 <Cart></Cart>
