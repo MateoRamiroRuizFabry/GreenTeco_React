@@ -34,10 +34,11 @@ function NavBar (props){
         <div> 
            <nav style={styleNavBar}>
            <div style={styleItemsNav}>
-                <Link to="/" style={styleA}>Inicio</Link>
-                <Link to="/" style={styleA}>Colecciones</Link>
-                <Link to="/" style={styleA}>Cómo comprar</Link>
-                <Link to="/category/Anillo" style={styleA}>Anillo</Link>  
+                <Link to="/" className="navItem" style={styleA}>Inicio</Link>
+                <Link to="/category/Collares" className="navItem" style={styleA}>Collares</Link>
+                <Link to="/category/Aritos" className="navItem" style={styleA}>Aritos</Link>
+                <Link to="/category/Anillo" className="navItem" style={styleA}>Anillos</Link>
+                <Link to="/category/Pulseras" className="navItem" style={styleA}>Pulseras</Link>  
            </div> 
            <div style={styleLogo}>
                 <Link to="/">

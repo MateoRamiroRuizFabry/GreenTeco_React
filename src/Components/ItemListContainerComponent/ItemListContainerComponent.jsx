@@ -1,8 +1,7 @@
-import getData from "../../Services/asyncMock";
+import {getData, getProductByCategory} from "../../Services/firebase";
 import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import { getProductByCategory } from "../../Services/asyncMock";
 
 function ItemListContainer(props){
     const styleTitle ={
@@ -16,7 +15,6 @@ function ItemListContainer(props){
 
     const [products, setProducts] = useState([])
     const { categoryId } = useParams();
-
 
     async function requestProducts () {
         
@@ -33,7 +31,7 @@ function ItemListContainer(props){
 
     return(
         <>
-        <h1 style={styleTitle}>Bienvenidos a GreenTeco</h1>
+        <h1 style={styleTitle}>¡Bienvenidos a GreenTeco!</h1>
         <div style={styleContainer}>
             {products.map((Item) =>(
                 <ItemList key={Item.id} {...Item}/>

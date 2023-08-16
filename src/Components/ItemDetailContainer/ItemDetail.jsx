@@ -1,3 +1,5 @@
+import ButtonComponent from "../ButtonComponent/ButtonComponent";
+
     const ItemDetail = props => {
         return(
            <div style={{backgroundColor: 'red'}}>
